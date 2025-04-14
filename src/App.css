@@ -1,3 +1,12 @@
+:root{
+  --slide-count: 13;
+  --slide-height: 250px;
+  --slide-width: 1800px;
+  --pad: 10px;
+  --gap: 35px;
+  --time: 20s
+}
+
 *{
   padding: 0;
   margin: 0;
@@ -19,7 +28,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
 }
@@ -66,7 +75,8 @@ nav {
 
 .hero {
   text-align: center;
-  background: rgba(255, 255, 255, 0.6);
+  /* height: 100vh; */
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(3.5px);
   -webkit-backdrop-filter: blur(3.5px);
   padding: 100px 20px 60px;
@@ -110,7 +120,7 @@ nav {
   border: 1px solid #ccc;
 }
 
-section:nth-of-type(2){
+.second-section{
   background-color: rgb(4, 3, 14);
   display: flex;
   flex-direction: column;
@@ -119,7 +129,7 @@ section:nth-of-type(2){
   color: white;
 }
 
-section:nth-of-type(2) p{
+.second-section p{
   text-transform: uppercase;
   font-size: 0.7rem;
   padding: 60px 40px;

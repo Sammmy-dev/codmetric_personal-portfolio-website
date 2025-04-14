@@ -1,9 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import Slider from './components/Slider';
+
 
 function App() {
+  const sliders = [
+    {
+      id:"slider1",
+      texts:[
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React.js",
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "Tailwind",
+        "Redux",
+        "Postgres",
+        "GSAP",
+      ],
+      direction:"right"
+    }
+  ];
   return (
     <div className='container'>
       <nav>
@@ -34,8 +52,13 @@ function App() {
           <button className="btn-secondary">Learn more</button>
         </div>
       </section>
-      <section>
+      <section className='second-section'>
           <p>2+ years of development experience</p>
+          <div className='slider-container'>
+            {sliders.map((slider)=>{
+              return(<Slider key={slider.id} id={slider.id} texts={slider.texts} direction={slider.direction}/>)
+            })}
+          </div>
       </section>
   </div>
   )
