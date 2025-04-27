@@ -4,6 +4,7 @@ import { BiLinkAlt } from "react-icons/bi";
 import { MdOutlineLocationOn,MdOutlineWhatsapp } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub,FaLinkedinIn } from "react-icons/fa";
+import { LuMenu } from "react-icons/lu";
 
 
 function App() {
@@ -40,8 +41,15 @@ function App() {
               </div>
             </div>
           </div>
+          <div className='menu'><LuMenu /></div>
           <div className="nav-links">
             <a href="#">About Me</a>
+            <a href="#">Projects</a>
+            <a href="#">Skills</a>
+            <a href="#">Contact</a>
+          </div>
+          <div className="mobile-nav-links">
+            <a href="#about">About Me</a>
             <a href="#">Projects</a>
             <a href="#">Skills</a>
             <a href="#">Contact</a>
@@ -53,6 +61,7 @@ function App() {
           <p>Agency-quality Webflow websites with the personal touch of a freelancer.</p>
           <div className="hero-buttons">
             <button className="btn-primary">Work with me</button>
+            <button className="btn-secondary">Download CV</button>
           </div>
         </section>
       </div>
@@ -64,7 +73,7 @@ function App() {
             })}
           </div>
       </section>
-      <section className='about'>
+      <section id='about' className='about'>
         <div className="profile-cont">
           <div className='profile'>
             <img src="/Blue White Simple Professional Recruitment LinkedIn Profile Picture_20250416_183825_0000~2.png" alt="my picture" />

@@ -17,10 +17,20 @@
   font-family: "Kanit", sans-serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  background-color: #fbfdfb;
+}
+
 .container {
   font-family: 'Inter', sans-serif;
   width: 100%;
-  margin: 0;
+  max-width: 1400px;
+  margin: auto;
+  position: relative;
   /* background-color: #FBAB7E; */
   padding: 0;
   color: #111;
@@ -90,6 +100,37 @@ nav {
   color: #9cd4fa;
 }
 
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 10px;
+  background-color: rgba(188, 235, 219, 0.7);
+  font-size: 14px;
+}
+
+.mobile-nav-links a {
+  text-decoration: none;
+  color:  rgb(4, 3, 14);
+  font-weight: 400;
+  font-size: 1.2rem;
+  transition: 200ms;
+}
+
+.mobile-nav-links a:hover{
+  color: white;
+}
+
+.menu{
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.menu:hover{
+  color: #9cd4fa;
+}
+
 .hero {
   text-align: center;
   /* height: 100vh; */
@@ -140,6 +181,10 @@ nav {
   background: #fff;
   color: #111;
   border: 1px solid #ccc;
+}
+
+.btn-secondary:hover{
+  background-color: #c0d1c0;
 }
 
 .second-section{
@@ -231,6 +276,7 @@ nav {
   /* z-index: 1; */
   color: #c0d1c0;
   background-color:rgb(4, 3, 14) ;
+  opacity: 0.7;
   
 }
 
@@ -337,6 +383,10 @@ footer div:nth-of-type(2) a:hover{
 @media (max-width: 768px) {
   .nav-links{
     display: none;
+  }
+
+  .menu{
+    display: block;
   }
 
   .project-card{
