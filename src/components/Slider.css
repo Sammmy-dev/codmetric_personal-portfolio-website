@@ -42,11 +42,11 @@
     animation: scrollLeft var(--time) linear infinite;
 } */
 
-.scrollRight{
+/* .scrollRight{
     animation: scrollRight var(--time) linear infinite;
-}
+} */
 
-@keyframes scrollRight{
+/* @keyframes scrollRight{
     0%{
         transform: translateX(0);
     }
@@ -54,4 +54,4 @@
     100%{
         transform: translateX(-50%);
     }
-}
+} */
