@@ -108,7 +108,14 @@ function App() {
               Out of the Work you'll find me gaming, seeing movies, and constructing.
               <br />
               <br />
-              <span><span className='loc-icon'><MdOutlineLocationOn /></span> <span className='location'>Nigeria</span></span>
+              <span className='location'>
+                <span className='loc-icon'>
+                  <MdOutlineLocationOn />
+                </span>
+                <span>
+                  Nigeria
+                </span>
+              </span>
             </p>
           </div>
         </div>
