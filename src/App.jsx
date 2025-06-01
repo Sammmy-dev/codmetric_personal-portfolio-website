@@ -48,8 +48,8 @@ function App() {
             <div className='menu' onClick={()=>setToggleOn((prev)=>!prev)}><LuMenu /></div>
             <div className="nav-links">
               <a href="#about">About Me</a>
-              <a href="#project">Projects</a>
               <a href="#skill">Skills</a>
+              <a href="#project">Projects</a>
               <a href="#contact">Contact</a>
             </div>
           </div>
@@ -61,12 +61,12 @@ function App() {
             <p>Building responsive, Well optimized web applications with precision and creativity, hence making every pixel awesome.</p>
             <div className="hero-buttons">
               <a href="mailto:ajiboyeadebayo901@gmail.com"><button className="btn-primary">Work with me</button></a>
-              <a href="https://asset.cloudinary.com/dl9mx2tvo/e4b2dcb2413b0f70942434a85998e751" target='blank'><button className="btn-secondary">Download CV</button></a>
+              <a href="https://asset.cloudinary.com/dl9mx2tvo/e4b2dcb2413b0f70942434a85998e751" target='blank'><button className="btn-secondary">View CV</button></a>
             </div>
             <div className="mobile-nav-links" id={toggleOn ? 'show' : 'hidden'}>
               <a href="#about" onClick={()=>setToggleOn((prev)=>!prev)}>About Me</a>
-              <a href="#project" onClick={()=>setToggleOn((prev)=>!prev)}>Projects</a>
               <a href="#skill" onClick={()=>setToggleOn((prev)=>!prev)}>Skills</a>
+              <a href="#project" onClick={()=>setToggleOn((prev)=>!prev)}>Projects</a>
               <a href="#contact" onClick={()=>setToggleOn((prev)=>!prev)}>Contact</a>
             </div>
           </div>

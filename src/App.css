@@ -464,11 +464,9 @@ footer{
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  gap: 20px;
 }
 .footer-max-cont div:nth-of-type(2) a{
-  padding-left: 2.5%;
-  padding-right: 2.5%;
-  margin-right: 4%;
   color: #c0d1c0;
   text-align: center;
   transition: 200ms;
@@ -541,6 +539,10 @@ footer{
     display: block;
   }
 
+  .mobile-nav-links{
+    display: none;
+  }
+
   .project-card{
     flex-direction: column-reverse;
   }
@@ -599,5 +601,11 @@ footer{
   }
 
 
+}
+
+@media (min-width: 768px) {
+  #show{
+    display: none;
+  }
 }
 
