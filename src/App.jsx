@@ -125,7 +125,7 @@ function App() {
             <p>Building responsive, Well optimized web applications with precision and creativity, hence making every pixel awesome.</p>
             <div className="hero-buttons">
               <a href="mailto:ajiboyeadebayo901@gmail.com"><button className="btn-primary">Work with me</button></a>
-              <a href="https://asset.cloudinary.com/dl9mx2tvo/e4b2dcb2413b0f70942434a85998e751" target='blank'><button className="btn-secondary">View CV</button></a>
+              <a href="https://res.cloudinary.com/dl9mx2tvo/image/upload/v1745790867/CV_ivqovk.pdf" target='blank'><button className="btn-secondary">View CV</button></a>
             </div>
             <div className="mobile-nav-links" id={toggleOn ? 'show' : 'hidden'}>
               <a href="#about" onClick={()=>setToggleOn((prev)=>!prev)}>About Me</a>
