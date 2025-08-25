@@ -334,6 +334,7 @@ nav {
 }
 .profile-cont p{
   font-size: 1.2rem;
+  /* text-align: justify; */
 }
 
 .profile-cont p:nth-of-type(2)  span{

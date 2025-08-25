@@ -36,6 +36,16 @@ function App() {
   ];
 
   useGSAP(() => {
+    // Pulse animation for online status
+    gsap.to('.online', {
+      scale: 1.3,
+      boxShadow: '0 0 12px 2px rgb(120,255,120)',
+      repeat: -1,
+      yoyo: true,
+      duration: 0.7,
+      ease: 'power1.inOut',
+    });
+
     // Hero section animation
     const splitHero = new SplitText('.hero-max-cont h1', { type: 'lines' });
     gsap.from(splitHero.lines, {
