@@ -19,6 +19,8 @@
 
 html{
   scroll-behavior: smooth;
+  -webkit-scroll-behavior: smooth; /* Safari, Chrome */
+  -ms-scroll-behavior: smooth;     /* IE/Edge */
 }
 
 body{

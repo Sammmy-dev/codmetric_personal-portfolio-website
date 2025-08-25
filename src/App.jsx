@@ -15,6 +15,19 @@ import SplitText from 'gsap/SplitText';
 function App() {
   gsap.registerPlugin(ScrollTrigger, SplitText);
   const [toggleOn, setToggleOn] = useState(false)
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    if (!toggleOn) return;
+    const handleClick = (e) => {
+      const menu = document.querySelector('.mobile-nav-links');
+      if (menu && !menu.contains(e.target) && e.target.closest('.menu') === null) {
+        setToggleOn(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [toggleOn]);
   const sliders = [
     {
       id:"slider1",
