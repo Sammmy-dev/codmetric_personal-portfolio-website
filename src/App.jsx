@@ -5,10 +5,15 @@ import { MdOutlineLocationOn,MdOutlineWhatsapp } from "react-icons/md";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub,FaLinkedinIn } from "react-icons/fa";
 import { LuMenu } from "react-icons/lu";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/all';
+import { useGSAP } from '@gsap/react';
+import SplitText from 'gsap/SplitText';
 
 function App() {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
   const [toggleOn, setToggleOn] = useState(false)
   const sliders = [
     {
@@ -29,6 +34,55 @@ function App() {
       direction:"right"
     }
   ];
+
+  useGSAP(() => {
+    // Hero section animation
+    const splitHero = new SplitText('.hero-max-cont h1', { type: 'lines' });
+    gsap.from(splitHero.lines, {
+      opacity: 0,
+      y: 50,
+      stagger: 0.15,
+      duration: 0.8,
+      ease: 'power3.out',
+    });
+    const splitPara = new SplitText('.hero-max-cont p', { type: 'lines' });
+    gsap.from(splitPara.lines, {
+      opacity: 0,
+      y: 30,
+      stagger: 0.12,
+      duration: 0.6,
+      delay: 0.5,
+      ease: 'power3.out',
+    });
+
+    // About section animation with ScrollTrigger
+    const splitAboutH3 = new SplitText('.about-max-cont h3', { type: 'lines' });
+    gsap.from(splitAboutH3.lines, {
+      opacity: 0,
+      y: 40,
+      stagger: 0.15,
+      duration: 0.7,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.about-max-cont h3',
+        start: 'top 80%',
+        toggleActions: 'play none none none',
+      }
+    });
+    const splitAboutP = new SplitText('.about-max-cont p', { type: 'lines' });
+    gsap.from(splitAboutP.lines, {
+      opacity: 0,
+      y: 20,
+      stagger: 0.12,
+      duration: 0.6,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: '.about-max-cont p',
+        start: 'top 85%',
+        toggleActions: 'play none none none',
+      }
+    });
+  }, []);
   return (
     <div className='container'>
       <div className="nav-hero">
